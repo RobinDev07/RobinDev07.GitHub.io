@@ -1,0 +1,17 @@
+body {
+	background-color: #19D09F;
+	color: #000000;
+	padding: 0 26px;
+	word-wrap: break-word;
+}
+pre {
+    border: 1px solid #000000;
+    border-radius: 5px;
+	padding: 0 26px;
+}
+code {
+	tab-size: 4;
+	font-family: Consolas, "微软雅黑";
+	font-size: 1em;
+	line-height: 1.357em;
+}
