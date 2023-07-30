@@ -3,11 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../style/main.css">
+    <link rel="stylesheet" href="/style/main.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
     <title>LLCMDShop</title>
 </head>
 <body>
-    <h1>LLCMDShop V1.1.1</h1>
+    <h1>LLCMDShop V1.1.0</h1>
     <h2>配置文件</h2>
     <pre><code>
 /config/config.json 通用配置
@@ -19,6 +23,9 @@
       - max
       - min
     - $生物标准类名 对应奖励名称
+    - scores 记分板项
+      - $记分板名称
+        - transfer 是否用于自助转账
 /config/icons.json 图标索引
   - CMDShop
     - $翻译文本 对应材质路径
@@ -28,6 +35,6 @@
   - giftCode 礼品码
     </code></pre>
     <h2>结构图</h2>
-    <img src="../res/llcmdshop.svg" alt="structure">
+    <img src="./cmdshop.svg" alt="structure">
 </body>
 </html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style/main.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <title>LLCMDRoot</title>
+</head>
+<body>
+    <h1>LLCMDRoot V2.1.0</h1>
+    <h2>配置文件</h2>
+    <pre><code>
+/config/config.json 通用配置
+  - langCode 语言
+  - overworldExplode 禁用主世界方块爆炸
+  - permKey 权限密钥
+    - $密钥
+      - 1~4 (权限等级)
+  - backup 备份
+    - p1 主备份规则
+    - p2 次备份规则
+    - p3 次次备份规则
+/config/icons.json 图标索引
+  - CMDRoot
+    - $翻译文本 对应材质路径
+    </code></pre>
+    <h2>结构图</h2>
+    <img src="./cmdroot.svg" alt="structure">
+</body>
+</html>
