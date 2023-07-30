@@ -1,0 +1,47 @@
+@font-face {
+	font-family: dogica;
+	src: url(/asset/DogicaPixel.woff2);
+}
+
+@font-face {
+	font-family: vbm12;
+	src: url(/asset/VonwaonBitmaP12px.woff2);
+}
+
+@font-face {
+	font-family: iosevka;
+	src: url(/asset/IosevkaFixedSlab.woff2);
+}
+
+body {
+	background-color: #19D09F;
+	color: #000000;
+	padding: 0 26px 0 26px;
+	word-wrap: break-word;
+}
+
+pre {
+	border-radius: 25px;
+	padding: 0 26px 0 26px;
+	box-shadow: 8px 8px 8px #0000004D,
+		-8px -8px 8px #48FFCEB2;
+}
+
+code {
+	tab-size: 4;
+	font-family: iosevka, Consolas, "微软雅黑";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+h1 {
+	font-family: dogica, vbm12;
+	text-shadow: 1px 1px 0px #021A14,
+		2px 2px 0px #074E3C,
+		3px 3px 0px #128263,
+		4px 4px 0px #17B68B;
+}
+
+h2 {
+	font-family: vbm12;
+}
