@@ -3,15 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/style/main.css">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="/asset/style/main.css">
     <title>LLCMDRoot</title>
 </head>
 <body>
-    <h1>LLCMDRoot V2.1.0</h1>
+    <h1>LLCMDRoot V2.2.0</h1>
     <h2>配置文件</h2>
     <pre><code>
 /config/config.json 通用配置
@@ -29,6 +25,13 @@
     - $翻译文本 对应材质路径
     </code></pre>
     <h2>结构图</h2>
-    <img src="./cmdroot.svg" alt="structure">
+    <div class="zoom-buttons">
+        <button onclick="zoomImg('img0', 0.2)">+</button>
+        <button onclick="zoomImg('img0', -0.2)">-</button>
+        <button onclick="zoomRImg('img0')">=</button>
+    </div>
+    <div class="image-scroll"><img src="./cmdroot.svg" alt="结构图" id="img0"></div>
+    <script src="/asset/script/imgdiv.js"></script>
+    <script src="/asset/script/load.js"></script>
 </body>
 </html>
