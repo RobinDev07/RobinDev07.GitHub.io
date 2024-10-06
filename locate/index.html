@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>定位获取</title>
+    <link rel="stylesheet" href="/asset/style/main.css">
+</head>
+<body>
+<h2>点击按钮获取您的位置</h2>
+<button onclick="getLocation()">获取位置</button>
+
+<div id="output" style="margin: 26px 0">
+    经度：<input id="longitude" type="text" readonly=true /><br>
+    纬度：<input id="latitude" type="text" readonly=true />
+</div>
+
+<script>
+    function getLocation() {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(showPosition, showError);
+        } else {
+            document.getElementById('output').innerHTML = "浏览器不支持定位功能。";
+        }
+    }
+
+    function showPosition(position) {
+        const output = document.getElementById('output');
+        output.innerHTML = `经度：<input type="text" value="${position.coords.longitude}" readonly=true /><br>纬度：<input type="text" value="${position.coords.latitude}"readonly=true />`
+    }
+
+    function showError(error) {
+        let errorMsg = '';
+        switch(error.code) {
+            case error.PERMISSION_DENIED:
+                errorMsg = "用户拒绝了定位请求。";
+                break;
+            case error.POSITION_UNAVAILABLE:
+                errorMsg = "位置信息不可用。";
+                break;
+            case error.TIMEOUT:
+                errorMsg = "请求超时。";
+                break;
+            case error.UNKNOWN_ERROR:
+                errorMsg = "未知错误。";
+                break;
+        }
+        document.getElementById('output').innerHTML = errorMsg;
+    }
+</script>
+<script src="/asset/script/load.js"></script>
+
+</body>
+</html>

@@ -1,23 +1,13 @@
-@font-face {
-	font-family: dogica;
-	src: url(/asset/font/DogicaPixel.woff2);
-}
-
-@font-face {
-	font-family: vbm12;
-	src: url(/asset/font/VonwaonBitmaP12px.woff2);
-}
-
-@font-face {
-	font-family: iosevka;
-	src: url(/asset/font/IosevkaFixedSlab.woff2);
-}
+@font-face {font-family: dogica; src: url(/asset/font/DogicaPixel.woff2);}
+@font-face {font-family: vbm12; src: url(/asset/font/VonwaonBitmaP12px.woff2);}
+@font-face {font-family: iosevka; src: url(/asset/font/IosevkaFixedSlab.woff2);}
 
 body {
 	background-color: #19D09F;
 	color: #000000;
 	margin: 0;
 	padding: 0 26px 26px 26px;
+    min-height: calc(100vh - 26px);
 	word-wrap: break-word;
 }
 
@@ -46,6 +36,42 @@ h1 {
 
 h2 {font-family:vbm12;}
 
+button {
+	font-size: 17px;
+	padding: 12px 16px;
+	font-weight: 500;
+	background: #19d09f;
+	color: black;
+	border: none;
+	position: relative;
+	overflow: hidden;
+	border-radius: 100px;
+	box-shadow: 4px 4px 4px #0000004D,
+		-4px -4px 4px #48FFCEB2;
+}
+button:hover {
+	transform: scale(1.03);
+}
+button:active {
+	transform: scale(0.97);
+	box-shadow: inset 4px 4px 4px #0000004D,
+		inset -4px -4px 4px #48FFCEB2;
+}
+
+input {
+  padding: 8px;
+  margin: 6px 8px;
+  border: 1.5px solid #000;
+  border-radius: 12px;
+  background: #29e0Af;
+  outline: none;
+}
+input:hover {transform: scale(1.03);}
+input:active {transform: scale(0.97);}
+input:focus {background: #39f0bf;}
+input::placeholder {color: #000;}
+input:focus::placeholder {color: lightgrey;}
+
 .topnav {
 	width: calc(100% - 20px);
 	height: auto;
@@ -59,7 +85,6 @@ h2 {font-family:vbm12;}
 	left: 0px;
 	padding: 0 10px;
 }
-
 .topnav a {
 	float: left;
 	display: block;
@@ -71,8 +96,26 @@ h2 {font-family:vbm12;}
 	font-weight: bold;
 	font-size: 1.3em;
 }
-
 .topnav a:hover {background-color:#01C897;}
+
+a.crystal-button {
+	color: #000000;
+    background: #39f0bf;
+	text-decoration: none;
+    padding: 12px 16px;
+    margin: 8px;
+    font-weight: bold;
+    border-radius: 12px;
+    box-shadow: 6px 6px 6px #0000004D,
+		-6px -6px 6px #48FFCEB2,
+        inset 6px 6px 6px #0000004D,
+		inset -6px -6px 6px #48FFCEB2;
+}
+a.crystal-button:hover {
+    background: #19d09f;
+    box-shadow: inset 6px 6px 6px #0000004D,
+		inset -6px -6px 6px #48FFCEB2;
+}
 
 .image-scroll {
 	max-height: 80svh;
@@ -83,31 +126,37 @@ h2 {font-family:vbm12;}
 	box-shadow: inset 8px 8px 8px #0000004D,
 		inset -8px -8px 8px #48FFCEB2;
 }
-
 .image-scroll::-webkit-scrollbar {display:none;}
-
 .image-scroll img {display:block;margin:auto;}
 
 .zoom-buttons {
-	display: table;
+	display: flex;
+    height: 40px;
 	border-radius: 20px;
 	overflow: hidden;
 	box-shadow: 0px 8px 8px #0000004D,
-		-0px -8px 8px #48FFCEB2;
+		0px -8px 8px #48FFCEB2;
 	position: absolute;
 	right: 26px;
 }
-
 .zoom-buttons button {
 	width: 40px;
 	height: 40px;
+    padding: 8px;
+    margin: 0;
+    border-radius: 0;
 	background-color: #11D8A7;
+    box-shadow: none;
 	border: none;
-	font-size: 16px;
+	font-size: 20px;
 	color: #000;
 }
-
 .zoom-buttons button:hover {background-color:#01C897;}
+.zoom-buttons button:nth-of-type(1) {border-radius: 20px 0 0 20px}
+.zoom-buttons button:nth-of-type(3) {border-radius: 0 20px 20px 0}
+.zoom-buttons img {user-select: none;}
+.zoom-buttons button:hover img {transform: scale(1.03)}
+.zoom-buttons button:active img {transform: scale(0.97)}
 
 /* Copyright - 2024 alexruix (Alex Ruiz) 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
